@@ -22,7 +22,7 @@ const array = reactive([
   { id: 3, isChecked: false },
 ]);
 let now = $(ref(new Date().toLocaleString()));
-const isAllChecked = $(
+let isAllChecked = $(
   computed({
     get: () => array.every((item) => item.isChecked),
     set: () => {
